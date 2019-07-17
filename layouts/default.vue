@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app >
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -40,11 +40,30 @@
     </v-content>
    
     <v-footer
-      :fixed="fixed"
-      app
+    dark
+    height="auto"
+  >
+    <v-card
+      flat
+      tile
+      class=" text-xs-center"
+      color='#f5f5f5'
     >
-      <span>&copy; 2019</span>
-    </v-footer>
+     <br>
+     <br>
+      <v-card-text class="white--text pt-0 black-text">
+        It is essential to stay relevant in this world, the Internet is another world we live in today, 
+        go LIVE! with an outstanding web platform today!  <router-link to='/contact' class=' badge'> Contact Me</router-link>
+        . I am professionally inclined to create your needed website in view of achieving the desired goals.
+      </v-card-text>
+  <share></share>
+      <v-divider></v-divider>
+
+      <v-card-text class="white--text black-text">
+        &copy;2019 — <strong>MobyTech</strong>
+      </v-card-text>
+    </v-card>
+  </v-footer>
   </v-app>
 </template>
 

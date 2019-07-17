@@ -49,7 +49,7 @@
                                   </div>
                                   <div class="about-left-info">
                                       <h4>Address</h4>
-                                      <p>Lekki Gardens, Aja. Lagos State</p>
+                                      <p>Lekki Gardens, Aja. Lagos</p>
                                   </div>
                                   <div class="about-left-info">
                                       <h4>Email Address</h4>
@@ -68,8 +68,7 @@
                                                 >
                                                   <v-img
                                                     :aspect-ratio="16/22"
-                                                    src="~assets/images/ab.jpg"
-                                                    :lazy-src="`~assets/images/black-spinner.gif`"
+                                                    src="_nuxt/assets/images/ab.jpg"
                                                   ></v-img>
                                                  
                                                 </v-card>
@@ -94,8 +93,8 @@
                                           class='pix-edit '
                                         height="325"
                                         alt='henry onyemaobi porfolio website'
-                                        src="~assets/images/edu.jpg"
-                                        :lazy-src="`~assets/images/black-spinner.gif`"
+                                        src="_nuxt/assets/images/edu.jpg"
+                                        :lazy-src="`_nuxt/assets/images/black-spinner.gif`"
                                       ></v-parallax>
                                     </template>
                       </div>
@@ -176,8 +175,8 @@
                                       class='pix-edit'
                                         height="370"
                                         alt='henry onyemaobi porfolio website'
-                                        src="~assets/images/exp.jpg"
-                                        :lazy-src="`~assets/images/black-spinner.gif`"
+                                        src="_nuxt/assets/images/exp.jpg"
+                                        :lazy-src="`_nuxt/assets/images/black-spinner.gif`"
                                       ></v-parallax>
                                     </template>
                       </div>
@@ -195,18 +194,17 @@
                               <div class="education">
                                   <!--1 left-->
                                   <div class="skillname">
-                                      <v-img 
+                                      <img 
                                       src='~assets/images/skills/language-html5.svg'
                                       alt='henry onyemaobi porfolio website'
-                                        :lazy-src="`~assets/images/black-spinner.gif`"
+                                       
                                       >
-                                  </v-img>
                                   </div>
                                   <div class="education-info level">
                                           <template>
                                                   <div>
                                                     <v-progress-linear
-                                                      color="info"
+                                                      color="grey"
                                                       height="20"
                                                       value="95.5"
                                                     ><span class='percent'>95.5%</span></v-progress-linear> 
@@ -217,18 +215,18 @@
                                   <!--1-->
                                    <!--1 left-->
                                    <div class="skillname">
-                                          <v-img 
-                                          src='@assets/images/skills/language-css3.svg'
+                                          <img 
+                                          src="~assets/images/skills/language-css3.svg"
                                           alt='henry onyemaobi porfolio website'
-                                            :lazy-src="`/images/black-spinner.gif`"
+                                           
                                           >
-                                      </v-img>
+                                      
                                       </div>
                                       <div class="education-info level">
                                               <template>
                                                       <div>
                                                         <v-progress-linear
-                                                          color="info"
+                                                          color="grey"
                                                           height="20"
                                                           value="80"
                                                         ><span class='percent'>80%</span></v-progress-linear> 
@@ -239,18 +237,18 @@
                                       <!--1-->
                                          <!--1 left-->
                                   <div class="skillname">
-                                          <v-img 
-                                          src='/images/skills/js.svg'
+                                          <img 
+                                          src='~assets/images/skills/js.svg'
                                           alt='henry onyemaobi porfolio website'
-                                            :lazy-src="`/images/black-spinner.gif`"
+                                           
                                           >
-                                      </v-img>
+                                      
                                       </div>
                                       <div class="education-info level">
                                               <template>
                                                       <div>
                                                         <v-progress-linear
-                                                          color="info"
+                                                          color="grey"
                                                           height="20"
                                                           value="70.5"
                                                         ><span class='percent'>70.5%</span></v-progress-linear> 
@@ -261,18 +259,18 @@
                                       <!--1-->
                                          <!--1 left-->
                                   <div class="skillname">
-                                          <v-img 
-                                          src='/images/skills/bootstrap.svg'
+                                          <img 
+                                          src='~assets/images/skills/bootstrap.svg'
                                           alt='henry onyemaobi porfolio website'
-                                            :lazy-src="`/images/black-spinner.gif`"
+                                           
                                           >
-                                      </v-img>
+                                      
                                       </div>
                                       <div class="education-info level">
                                               <template>
                                                       <div>
                                                         <v-progress-linear
-                                                          color="info"
+                                                          color="grey"
                                                           height="20"
                                                           value="85"
                                                         ><span class='percent'>85%</span></v-progress-linear> 
@@ -283,18 +281,18 @@
                                       <!--1-->
                                          <!--1 left-->
                                   <div class="skillname">
-                                          <v-img 
-                                          src='/images/skills/jquery.svg'
+                                          <img 
+                                          src='~assets/images/skills/jquery.svg'
                                           alt='henry onyemaobi porfolio website'
-                                            :lazy-src="`/images/black-spinner.gif`"
+                                           
                                           >
-                                      </v-img>
+                                      
                                       </div>
                                       <div class="education-info level">
                                               <template>
                                                       <div>
                                                         <v-progress-linear
-                                                          color="info"
+                                                          color="grey"
                                                           height="20"
                                                           value="75"
                                                         ><span class='percent'>75%</span></v-progress-linear> 
@@ -305,18 +303,18 @@
                                       <!--1-->
                                        <!--1 left-->
                                   <div class="skillname">
-                                          <v-img 
-                                          src='/images/skills/vuejs.svg'
+                                          <img 
+                                          src='~assets/images/skills/vuejs.svg'
                                           alt='henry onyemaobi porfolio website'
-                                            :lazy-src="`/images/black-spinner.gif`"
+                                           
                                           >
-                                      </v-img>
+                                      
                                       </div>
                                       <div class="education-info level">
                                               <template>
                                                       <div>
                                                         <v-progress-linear
-                                                          color="info"
+                                                          color="grey"
                                                           height="20"
                                                           value="75.9"
                                                         ><span class='percent'>75.9%</span></v-progress-linear> 
@@ -343,18 +341,18 @@
                                   <div class="education">
                                       <!--1 right-->
                                       <div class="skillname">
-                                              <v-img 
-                                              src='/images/skills/language-php.svg'
+                                              <img 
+                                              src='~assets/images/skills/language-php.svg'
                                               alt='henry onyemaobi porfolio website'
-                                                :lazy-src="`/images/black-spinner.gif`"
+                                               
                                               >
-                                          </v-img>
+                                          
                                           </div>
                                           <div class="education-info level">
                                                   <template>
                                                           <div>
                                                             <v-progress-linear
-                                                              color="info"
+                                                              color="grey"
                                                               height="20"
                                                               value="80"
                                                             ><span class='percent'>80%</span></v-progress-linear> 
@@ -365,18 +363,18 @@
                                       <!--1-->
                                       <!--1 right-->
                                       <div class="skillname">
-                                              <v-img 
-                                              src='/images/skills/laravel.svg'
+                                              <img 
+                                              src='~assets/images/skills/laravel.svg'
                                               alt='henry onyemaobi porfolio website'
-                                                :lazy-src="`/images/black-spinner.gif`"
+                                               
                                               >
-                                          </v-img>
+                                          
                                           </div>
                                           <div class="education-info level">
                                                   <template>
                                                           <div>
                                                             <v-progress-linear
-                                                              color="info"
+                                                              color="grey"
                                                               height="20"
                                                               value="87"
                                                             ><span class='percent'>87%</span></v-progress-linear> 
@@ -387,18 +385,18 @@
                                       <!--1-->
                                       <!--1 right-->
                                       <div class="skillname">
-                                              <v-img 
-                                              src='/images/skills/database.svg'
+                                              <img 
+                                              src='~assets/images/skills/database.svg'
                                               alt='henry onyemaobi porfolio website'
-                                                :lazy-src="`/images/black-spinner.gif`"
+                                               
                                               >
-                                          </v-img>
+                                          
                                           </div>
                                           <div class="education-info level">
                                                   <template>
                                                           <div>
                                                             <v-progress-linear
-                                                              color="info"
+                                                              color="grey"
                                                               height="20"
                                                               value="75"
                                                             ><span class='percent'>75%</span></v-progress-linear> 
@@ -409,18 +407,18 @@
                                       <!--1-->
                                       <!--1 right-->
                                       <div class="skillname">
-                                              <v-img 
-                                              src='/images/skills/wordpress.svg'
+                                              <img 
+                                              src='~assets/images/skills/wordpress.svg'
                                               alt='henry onyemaobi porfolio website'
-                                                :lazy-src="`/images/black-spinner.gif`"
+                                               
                                               >
-                                          </v-img>
+                                          
                                           </div>
                                           <div class="education-info level">
                                                   <template>
                                                           <div>
                                                             <v-progress-linear
-                                                              color="info"
+                                                              color="grey"
                                                               height="20"
                                                               value="70"
                                                             ><span class='percent'>70%</span></v-progress-linear> 
@@ -431,18 +429,18 @@
                                       <!--1-->
                                       <!--1 right-->
                                       <div class="skillname">
-                                              <v-img 
-                                              src='/images/skills/github.svg'
+                                              <img 
+                                              src='~assets/images/skills/github.svg'
                                               alt='henry onyemaobi porfolio website'
-                                                :lazy-src="`/images/black-spinner.gif`"
+                                               
                                               >
-                                          </v-img>
+                                          
                                           </div>
                                           <div class="education-info level">
                                                   <template>
                                                           <div>
                                                             <v-progress-linear
-                                                              color="info"
+                                                              color="grey"
                                                               height="20"
                                                               value="60"
                                                             ><span class='percent'>60%</span></v-progress-linear> 

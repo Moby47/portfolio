@@ -31,11 +31,7 @@ export default {
         href:
           'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
       },
-    ],
-    script: [
-      { src: 'https://cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js' },
-      { src="https://code.jquery.com/jquery-3.3.1.slim.min.js" },
-    ],
+    ]
   },
   /*
   ** Customize the progress-bar color
