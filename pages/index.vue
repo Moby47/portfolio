@@ -12,7 +12,8 @@
                       <div class='dark-over '>
 
                       <div class="banner_info_agile_w3ls_inner bounceIn">
-                          <img src="~assets/images/pic.jpg" alt="Henry onyemaobi web developer portfolio"
+                          <img src="~assets/images/pic.jpg" 
+                          alt="Henry onyemaobi web developer portfolio"
                            class="img-responsive " title='Henry onyemaobi web developer'>
                           <h2>I'm Henry</h2>
                           <span>Web Developer</span>
@@ -68,7 +69,8 @@
                                                 >
                                                   <v-img
                                                     :aspect-ratio="16/22"
-                                                    src="_nuxt/assets/images/ab.jpg"
+                                                    src="http://localhost:8000/images/ab.jpg"
+                                                    :lazy-src="`http://localhost:8000/images/black-spinner.gif`"
                                                   ></v-img>
                                                  
                                                 </v-card>
@@ -484,11 +486,11 @@
 </style>
 
 <script>
-//import Logo from '~/components/Logo.vue'
+//import Thefooter from '~/components/Thefooter.vue'
 
 export default {
   components: {
-   // Logo,
+   // Thefooter,
   }
 }
 </script>

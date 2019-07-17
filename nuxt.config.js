@@ -13,6 +13,13 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' },
+      { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' },
+      { src: 'https://cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js' },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js' },
+      
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/pic.jpg' }
 ,
@@ -36,7 +43,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#ac3b61' },
   /*
   ** Global CSS
   */
@@ -58,14 +65,36 @@ export default {
     '@nuxtjs/vuetify',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     '@nuxtjs/pwa',
+    ['nuxt-validate', {
+      lang: 'es',
+      nuxti18n: {
+        //locale: {
+          //'zh-CN': 'zh_CN'
+        //}
+      }
+      // regular vee-validate options
+    }],
+    '@nuxtjs/moment',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    proxy: true // Can be also an object with default options
   },
+
+  proxy: {
+    '/api': {
+      target: 'http://localhost',
+      pathRewrite: {
+        '^/api' : '/'
+        }
+      }
+  },
+  
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module

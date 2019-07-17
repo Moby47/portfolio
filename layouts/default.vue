@@ -47,7 +47,7 @@
       flat
       tile
       class=" text-xs-center"
-      color='#f5f5f5'
+      color='rgb(210, 210, 210)'
     >
      <br>
      <br>
@@ -56,7 +56,7 @@
         go LIVE! with an outstanding web platform today!  <router-link to='/contact' class=' badge'> Contact Me</router-link>
         . I am professionally inclined to create your needed website in view of achieving the desired goals.
       </v-card-text>
-  <share></share>
+
       <v-divider></v-divider>
 
       <v-card-text class="white--text black-text">
@@ -68,7 +68,13 @@
 </template>
 
 <script>
+  //import Thefooter from '~/components/Thefooter.vue'
+  import axios from 'axios'
+
+  //axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+
 export default {
+  
   data() {
     return {
       clipped: false,
@@ -76,15 +82,30 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'apps',
-          title: 'Welcome',
+          icon: 'home',
+          title: 'MobyTech',
           to: '/'
         },
         {
-          icon: 'bubble_chart',
-          title: 'services',
+          icon: 'work',
+          title: 'Services',
           to: '/services'
-        }
+        },
+        {
+          icon: 'build',
+          title: 'Projects',
+          to: '/projects'
+        },
+        {
+          icon: 'speaker_notes',
+          title: 'Blog',
+          to: '/blog'
+        },
+        {
+          icon: 'contact_support',
+          title: 'Contact Me',
+          to: '/contact'
+        },
       ],
       miniVariant: false,
       right: true,
