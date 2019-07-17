@@ -52,6 +52,7 @@ export default {
     '@/assets/css/style.css',
     '@/assets/css/wicked.min.css',
     '@/assets/css/blog.css',
+    '@/assets/css/contact.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -70,9 +71,9 @@ export default {
     ['nuxt-validate', {
       lang: 'es',
       nuxti18n: {
-        //locale: {
-          //'zh-CN': 'zh_CN'
-        //}
+        locale: {
+          'En': 'En'
+        }
       }
       // regular vee-validate options
     }],

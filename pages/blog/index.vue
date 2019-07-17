@@ -55,7 +55,7 @@
                     <div class="blog_img">
                         
                         <div v-for='con in content' v-bind:key='con.id' class='elevation-10 wow slideUp blog_con text-capitalize'>
-                            <nuxt-link :to="'/single/'+con.title.replace(/[.,/*%' '?!#:;{}$%+=`()@]/g,'-')+'/'+con.id">
+                            <nuxt-link :to="'blog/'+con.title.replace(/[.,/*%' '?!#:;{}$%+=`()@]/g,'-')+'/'+con.id">
                                 <v-img
                                    class="white--text mobile-size"
                                    height="300px"
@@ -69,7 +69,7 @@
                             </div>
                             <div class="col-md-6 blog_info">
         
-                                <p><nuxt-link :to="'/single/'+con.title.replace(/[.,/*%' '?!#{}$%+=`:;()@]/g,'-')+'/'+con.id">
+                                <p><nuxt-link :to="'blog/'+con.title.replace(/[.,/*%' '?!#{}$%+=`:;()@]/g,'-')+'/'+con.id">
                                     <h5>{{con.title}} 	</h5>
                                     </nuxt-link></p>
         
