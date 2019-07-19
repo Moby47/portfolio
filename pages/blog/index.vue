@@ -136,9 +136,9 @@
                                                 <p>Henry Onyemaobi is a goal driven, self taught, fullstack web developer. 
                                                     Fueled by enthusiasm for computing.</p>
                                                 <div class="author_grid_pos">
-                                                    <v-img src="http://localhost:8000/images/pic.jpg" alt=" "
-                                                    :lazy-src="`http://localhost:8000/images/black-spinner.gif`"
-                                                     class="img-responsive"></v-img>
+                                                        <img src="http://localhost:8000/images/Henry onyemaobi web developer.jpg" 
+                                                        alt="Henry onyemaobi web developer in lagos state" 
+                                                        class="img-responsive">
                                                 </div>
                                             </div>
                                         </div>
@@ -192,6 +192,17 @@
         var moment =require('moment');
         
           export default {
+            head(){
+    return {
+      title: "Henry's Blog",
+      meta:[
+        
+          { hid: 'description', name: 'description', content: "Henry Onyemaobi's Tech Blog" },
+          { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress,blog, tech, tech blog, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher, pwa, spa, progressive web app, single page app, microsoft office' },
+        
+      ]
+    }
+  },
             data () {
               return {
                moment:moment,
@@ -236,7 +247,7 @@
             formdata.append('Email', this.Email);
             
             //send to database with axios
-                axios.post('http://localhost:8000/subscribe',formdata
+                axios.post('http://localhost:8000/api/subscribe',formdata
             ).then(res=>{
           if(res.data == 1){
             alert("Thank you! For Subscribing.");
@@ -336,7 +347,7 @@
         
                         var input = {'userId':userId, 'postId':postId};
         
-                        axios.post('http://localhost:8000/like',input)
+                        axios.post('http://localhost:8000/api/like',input)
                         .then(res=>{
                             if(res.data == 1){
                         alert('Post Liked!');
@@ -367,7 +378,7 @@
         
                     //go to server
                     var input = {'userId':userId, 'postId':postId};
-                    axios.post('http://localhost:8000/like',input)
+                    axios.post('http://localhost:8000/api/like',input)
                         .then(res=>{
                             if(res.data == 1){
                         alert('Post Liked!');

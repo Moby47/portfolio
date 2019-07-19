@@ -333,6 +333,18 @@
 <script>
 
   export default {
+
+  	head(){
+    return {
+      title: "Henry's Projects",
+      meta:[
+        
+          { hid: 'description', name: 'description', content: "Henry Onyemaobi's completed web development projects. traditional, single page and progressive web applications and websites from scatch and with wordpress" },
+          { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher, pwa, spa, progressive web app, single page app,portfolio,web projects' },
+        
+      ]
+    }
+  },
     data(){
       return{
         Allcontent: [],

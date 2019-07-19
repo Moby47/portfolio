@@ -75,7 +75,7 @@
                                         
                                                                 <ul class="blog_list">
                                                                     <li><span class="fa fa-list" aria-hidden="true"></span>{{con.category}}<i>|</i></li>
-                                                                    <li><a href="" @click.prevent='like(con.id)'><span class="fa fa-heart" aria-hidden="true"></span></a></li>
+                                                                    <li><a href="" @click.prevent='like(con.id)'><span class="fa fa-thumbs-up" aria-hidden="true"></span></a></li>
                                                                 </ul>
                                         
                                                             </div>
@@ -132,7 +132,9 @@
                                                 <p>Henry Onyemaobi is a goal driven, self taught, fullstack web developer. 
                                                         Fueled by enthusiasm for computing.</p>
                                             <div class="author_grid_pos">
-                                                <img src="http://localhost:8000/images/pic.jpg" alt=" " class="img-responsive">
+                                                <img src="http://localhost:8000/images/Henry onyemaobi web developer.jpg" 
+                                                alt="Henry onyemaobi web developer in lagos state" 
+                                                class="img-responsive">
                                             </div>
                                         </div>
                                     </div>
@@ -181,8 +183,22 @@
     <script>
 
         var moment =require('moment');
+        import axios from 'axios'
 
       export default {
+
+        head(){
+    return {
+      title: "Henry's Blog",
+      meta:[
+        
+          { hid: 'description', name: 'description', content: "Henry Onyemaobi's Tech Blog" },
+          { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress,blog, tech, tech blog, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher, pwa, spa, progressive web app, single page app, microsoft office' },
+        
+      ]
+    }
+  },
+  
         data () {
           return {
             moment:moment,
@@ -225,7 +241,7 @@
 formdata.append('Email', this.Email);
 
 //send to database with axios
-    axios.post('http://localhost:8000/subscribe',formdata
+    axios.post('http://localhost:8000/api/subscribe',formdata
 ).then(res=>{
 if(res.data == 1){
 alert("Thank you! For Subscribing.");
@@ -326,7 +342,7 @@ alert("An Error Occured, Please contact Admin");
 
             var input = {'userId':userId, 'postId':postId};
 
-            axios.post('http://localhost:8000/like',input)
+            axios.post('http://localhost:8000/api/like',input)
             .then(res=>{
                 if(res.data == 1){
             alert('Post Liked!');
@@ -361,7 +377,7 @@ alert("An Error Occured, Please contact Admin");
 
         //go to server
         var input = {'userId':userId, 'postId':postId};
-        axios.post('http://localhost:8000/like',input)
+        axios.post('http://localhost:8000/api/like',input)
             .then(res=>{
                 if(res.data == 1){
             alert('Post Liked!');

@@ -12,7 +12,7 @@
                       <div class='dark-over '>
 
                       <div class="banner_info_agile_w3ls_inner bounceIn">
-                          <img src="~assets/images/pic.jpg" 
+                          <img src="~assets/images/Henry onyemaobi web developer.jpg" 
                           alt="Henry onyemaobi web developer portfolio"
                            class="img-responsive " title='Henry onyemaobi web developer'>
                           <h2>I'm Henry</h2>
@@ -50,7 +50,7 @@
                                   </div>
                                   <div class="about-left-info">
                                       <h4>Address</h4>
-                                      <p>Lekki Gardens, Aja. Lagos</p>
+                                      <p>Lekki Gardens. Lagos</p>
                                   </div>
                                   <div class="about-left-info">
                                       <h4>Email Address</h4>
@@ -69,8 +69,9 @@
                                                 >
                                                   <v-img
                                                     :aspect-ratio="16/22"
-                                                    src="http://localhost:8000/images/ab.jpg"
+                                                    src="http://localhost:8000/images/Henry onyemaobi.jpg"
                                                     :lazy-src="`http://localhost:8000/images/black-spinner.gif`"
+                                                    alt='Henry onyemaobi, website designer in lagos'
                                                   ></v-img>
                                                  
                                                 </v-card>
@@ -94,7 +95,7 @@
                                       <v-parallax
                                           class='pix-edit '
                                         height="325"
-                                        alt='henry onyemaobi porfolio website'
+                                        alt='henry onyemaobi website developer in lagos'
                                         src="_nuxt/assets/images/edu.jpg"
                                         :lazy-src="`_nuxt/assets/images/black-spinner.gif`"
                                       ></v-parallax>
@@ -176,7 +177,7 @@
                                       <v-parallax
                                       class='pix-edit'
                                         height="370"
-                                        alt='henry onyemaobi porfolio website'
+                                        alt='henry onyemaobi, a web developer in lagos'
                                         src="_nuxt/assets/images/exp.jpg"
                                         :lazy-src="`_nuxt/assets/images/black-spinner.gif`"
                                       ></v-parallax>
@@ -198,7 +199,7 @@
                                   <div class="skillname">
                                       <img 
                                       src='~assets/images/skills/language-html5.svg'
-                                      alt='henry onyemaobi porfolio website'
+                                      alt='web / website developer in lagos'
                                        
                                       >
                                   </div>
@@ -219,7 +220,7 @@
                                    <div class="skillname">
                                           <img 
                                           src="~assets/images/skills/language-css3.svg"
-                                          alt='henry onyemaobi porfolio website'
+                                          alt='web / website developer in lagos'
                                            
                                           >
                                       
@@ -241,7 +242,7 @@
                                   <div class="skillname">
                                           <img 
                                           src='~assets/images/skills/js.svg'
-                                          alt='henry onyemaobi porfolio website'
+                                          alt='web / website developer in lagos'
                                            
                                           >
                                       
@@ -263,7 +264,7 @@
                                   <div class="skillname">
                                           <img 
                                           src='~assets/images/skills/bootstrap.svg'
-                                          alt='henry onyemaobi porfolio website'
+                                          alt='web / website developer in lagos'
                                            
                                           >
                                       
@@ -285,7 +286,7 @@
                                   <div class="skillname">
                                           <img 
                                           src='~assets/images/skills/jquery.svg'
-                                          alt='henry onyemaobi porfolio website'
+                                          alt='web / website developer in lagos'
                                            
                                           >
                                       
@@ -307,7 +308,7 @@
                                   <div class="skillname">
                                           <img 
                                           src='~assets/images/skills/vuejs.svg'
-                                          alt='henry onyemaobi porfolio website'
+                                          alt='web / website developer in lagos'
                                            
                                           >
                                       
@@ -345,7 +346,7 @@
                                       <div class="skillname">
                                               <img 
                                               src='~assets/images/skills/language-php.svg'
-                                              alt='henry onyemaobi porfolio website'
+                                              alt='web / website developer in lagos'
                                                
                                               >
                                           
@@ -367,7 +368,7 @@
                                       <div class="skillname">
                                               <img 
                                               src='~assets/images/skills/laravel.svg'
-                                              alt='henry onyemaobi porfolio website'
+                                              alt='web / website developer in lagos'
                                                
                                               >
                                           
@@ -389,7 +390,7 @@
                                       <div class="skillname">
                                               <img 
                                               src='~assets/images/skills/database.svg'
-                                              alt='henry onyemaobi porfolio website'
+                                              alt='web / website developer in lagos'
                                                
                                               >
                                           
@@ -411,7 +412,7 @@
                                       <div class="skillname">
                                               <img 
                                               src='~assets/images/skills/wordpress.svg'
-                                              alt='henry onyemaobi porfolio website'
+                                              alt='web / website developer in lagos'
                                                
                                               >
                                           
@@ -433,7 +434,7 @@
                                       <div class="skillname">
                                               <img 
                                               src='~assets/images/skills/github.svg'
-                                              alt='henry onyemaobi porfolio website'
+                                              alt='web / website developer in lagos'
                                                
                                               >
                                           
@@ -491,6 +492,17 @@
 export default {
   components: {
    // Thefooter,
-  }
+  },
+  head(){
+    return {
+      title: "Henry's Web Development Portfolio Website",
+      meta:[
+        
+          { hid: 'description', name: 'description', content: 'Meet Henry! a goal driven web developer dedicated to creating, designing, developing professional web applications and websites' },
+          { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher' },
+        
+      ]
+    }
+  },
 }
 </script>

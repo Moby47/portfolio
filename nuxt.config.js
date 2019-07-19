@@ -6,7 +6,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
+    titleTemplate: '%s',
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -17,7 +17,6 @@ export default {
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' },
       { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' },
       { src: 'https://cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js' },
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js' },
       
     ],
     link: [

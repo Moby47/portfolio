@@ -50,8 +50,10 @@
 								</form>
 							</div>
 							<div class="col-md-5 contact-left">
-								<h6>Quick Contact Info</h6>
-								
+								<h6>Quick Contact</h6>
+								<p>
+								Contact me for your customized web applications and  websites.
+								</p>
 								<div class="mail-us">
 									<div class="col-md-2 col-sm-2 col-xs-2 contact-icon">
 										<span class="fa fa-envelope" aria-hidden="true"></span>
@@ -101,6 +103,17 @@
     import axios from 'axios'
     
     export default {
+		head(){
+    return {
+      title: "Contact Henry",
+      meta:[
+        
+          { hid: 'description', name: 'description', content: 'Meet Henry! a goal driven web developer dedicated to creating, designing, developing professional web applications and websites' },
+          { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher, pwa, spa, progressive web app, single page app,portfolio,web projects' },
+        
+      ]
+    }
+  },
         data(){
 			return{
 				Name: '',
@@ -134,7 +147,11 @@
 	formdata.append('Message', this.Message);
     
     //send to database with axios
-    axios.post('localhost:8000/contact',formdata).then(res=>{
+	console.log('before')
+	console.log(formdata)
+    axios.post('http://localhost:8000/api/contact',formdata)
+	.then(res=>{
+	console.log('after')
   if(res.data == 1){
 	alert("Thank you! You will be contacted shortly.");
 	//clear in 3 secs
@@ -149,6 +166,7 @@
   })
   .catch(err=>{
 	  //toggle loading
+	  console.log(err)
 	 this.loading = false;
   })
 	//clear form and errorbag

@@ -188,8 +188,20 @@
 import axios from 'axios'
 
 var moment =require('moment');
+
     export default {
+
+		head(){
+    return {
+      title: "Henry's Services",
+      meta:[
         
+          { hid: 'description', name: 'description', content: "Henry Onyemaobi's offers a range of web development and tuturing services, such as creating, designing, developing traditional, single page and progressive web applications and websites from scatch and with wordpress" },
+          { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher, pwa, spa, progressive web app, single page app, microsoft office' },
+        
+      ]
+    }
+  },
 
         data(){
             return{

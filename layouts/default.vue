@@ -47,19 +47,19 @@
       flat
       tile
       class=" text-xs-center"
-      color='rgb(210, 210, 210)'
+      color='#123c69'
     >
      <br>
      <br>
-      <v-card-text class="white--text pt-0 black-text">
+      <v-card-text class="white--text pt-0 ">
         It is essential to stay relevant in this world, the Internet is another world we live in today, 
         go LIVE! with an outstanding web platform today!  <router-link to='/contact' class=' badge'> Contact Me</router-link>
-        . I am professionally inclined to create your needed website in view of achieving the desired goals.
+        . I am professionally inclined to design your needed website in view of achieving the desired goals.
       </v-card-text>
 
       <v-divider></v-divider>
 
-      <v-card-text class="white--text black-text">
+      <v-card-text class="white--text ">
         &copy;2019 — <strong>MobyTech</strong>
       </v-card-text>
     </v-card>
@@ -68,6 +68,7 @@
 </template>
 
 <script>
+  
   //import Thefooter from '~/components/Thefooter.vue'
   import axios from 'axios'
 
@@ -75,6 +76,11 @@
 
 export default {
   
+  head () {
+    return {
+    }
+  },
+
   data() {
     return {
       clipped: false,
