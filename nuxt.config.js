@@ -42,7 +42,10 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#ac3b61' },
+  loading: { 
+    color: '#ac3b61',
+    height: '5px',
+   },
   /*
   ** Global CSS
   */
@@ -69,11 +72,6 @@ export default {
     '@nuxtjs/pwa',
     ['nuxt-validate', {
       lang: 'es',
-      nuxti18n: {
-        locale: {
-          'En': 'En'
-        }
-      }
       // regular vee-validate options
     }],
     '@nuxtjs/moment',

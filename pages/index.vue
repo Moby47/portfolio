@@ -96,7 +96,7 @@
                                           class='pix-edit '
                                         height="325"
                                         alt='henry onyemaobi website developer in lagos'
-                                        src="_nuxt/assets/images/edu.jpg"
+                                        src="_nuxt/assets/images/henry-website-edu.jpg"
                                         :lazy-src="`_nuxt/assets/images/black-spinner.gif`"
                                       ></v-parallax>
                                     </template>
@@ -178,7 +178,7 @@
                                       class='pix-edit'
                                         height="370"
                                         alt='henry onyemaobi, a web developer in lagos'
-                                        src="_nuxt/assets/images/exp.jpg"
+                                        src="_nuxt/assets/images/henry-website-exp.jpg"
                                         :lazy-src="`_nuxt/assets/images/black-spinner.gif`"
                                       ></v-parallax>
                                     </template>

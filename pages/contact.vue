@@ -136,7 +136,7 @@
 			 //if no error
 			 //toggle loading
 			 this.loading = true;
-			 
+			 this.$nuxt.$loading.start()
             // instantiant formdata object
        const formdata  = new FormData();
     //append form data to formdata
@@ -153,12 +153,10 @@
 	.then(res=>{
 	console.log('after')
   if(res.data == 1){
+	this.$nuxt.$loading.finish()
 	alert("Thank you! You will be contacted shortly.");
-	//clear in 3 secs
-	setTimeout(func=>{
-			
-			},3000)
   }else{
+	this.$nuxt.$loading.finish()
     alert("An Error Occured, Please call me");
   }
      //toggle loading
@@ -167,6 +165,7 @@
   .catch(err=>{
 	  //toggle loading
 	  console.log(err)
+	  this.$nuxt.$loading.finish()
 	 this.loading = false;
   })
 	//clear form and errorbag
