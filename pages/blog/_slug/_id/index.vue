@@ -69,18 +69,17 @@
                                     <div class="comments">
                                         <h3>Recent <span>Comments</span></h3>
                                         <div class="comments-grids">
-
+                                            
+                                            <template>
+                                                <div class="comments">
+                        <vue-disqus shortname="henryonyemaobi"
+                         :identifier="singlecontent.id"
+                        :url="url">
+                        </vue-disqus>
+                                                </div>
+                                              </template>
                                                <!--    
-                                                <template>
-                                                        <div class="comments">
-                                <vue-disqus shortname="henryonyemaobi"
-                                 :identifier="singlecontent.id"
-         :url="`http://localhost:8000/blog/`+singlecontent.title.replace(/[.,/*%' '?!()@]/g,'-')+`/`+singlecontent.id">
-                                </vue-disqus>
-                                                        </div>
-                                                      </template>
-
-
+                                             
                                                  	<script>
                                                 
                                                         /**
@@ -178,7 +177,7 @@ import axios from 'axios'
       title: this.singlecontent.title + ' by Henry Omyemaobi',
       meta:[
         
-          { hid: 'description', name: 'description', content: this.singlecontent.description +'jnjn'},
+          { hid: 'description1', name: 'description', content: this.singlecontent.description +'jnjn'},
           { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress,blog, tech, tech blog, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher, pwa, spa, progressive web app, single page app, microsoft office' },
         
       ]
@@ -194,19 +193,21 @@ import axios from 'axios'
                   data_load: true,
                     data: false,
                 wait: false,
+                query:'',
+                url:'',
                 }
               },
               
               methods: {
           
                 search(){
-            //NProgress.start()
-            if(this.query == '' || this.query == undefined){
-                alert("Please enter a word.");
-            }else{
-                this.$router.push({name:'search', params:{'query':this.query}});
-            }
-            //NProgress.done()
+                    this.$nuxt.$loading.start()
+                if(this.query == ''){
+                    alert("Please enter a word.");
+                }else{
+                    this.$router.push({name:'search', params:{'query':this.query}});
+                }
+                this.$nuxt.$loading.finish()
         },
 
           
@@ -270,7 +271,8 @@ import axios from 'axios'
                     .then(res=>{
                       this.singlecontent = res.data;
                       this.wait = false;
-                      
+                      this.url = `http://localhost:3000/blog/`+this.singlecontent.title.replace(/[.,/*%' '?!()@]/g,'-')+`/`+this.singlecontent.id
+                      //alert(this.url)
                     })
                     .catch(error =>{
                         console.log(error);

@@ -108,7 +108,7 @@
       title: "Contact Henry",
       meta:[
         
-          { hid: 'description', name: 'description', content: 'Meet Henry! a goal driven web developer dedicated to creating, designing, developing professional web applications and websites' },
+          { hid: 'description4', name: 'description', content: 'Meet Henry! a goal driven web developer dedicated to creating, designing, developing professional web applications and websites' },
           { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher, pwa, spa, progressive web app, single page app,portfolio,web projects' },
         
       ]
@@ -189,7 +189,9 @@
 		},
 
 		mounted(){
-			
+			//(key, val)
+			//this.$storage.setLocalStorage('stuff', 'works')
+		    //this.$storage.getLocalStorage('stuff')
 		}
 		
 

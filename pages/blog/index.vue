@@ -114,9 +114,9 @@
                                     <div class="col-md-5 blog_left ">
                                         <div class="search left_bar">
                                                 <h3>Search </h3>
-                                                    <form action="#" method="post">
-                                                        <input class="email" v-model='query' v-validate='"required"' type="email" name="Search" placeholder="Eg: Laravel" >
-                                                        <input type="submit" @click.prevent='search()' value="Search" class='text-white'>
+                                   <form action="#" method="post">
+          <input class="email" v-model='query' v-validate='"required"' type="email" name="Search" placeholder="Eg: Laravel" >
+                               <input type="submit" @click.prevent='search()' value="Search" class='text-white'>
                                                         
                                                     </form> 
                                                 <br>
@@ -197,7 +197,7 @@
       title: "Henry's Blog",
       meta:[
         
-          { hid: 'description', name: 'description', content: "Henry Onyemaobi's Tech Blog" },
+          { hid: 'description2', name: 'description', content: "Henry Onyemaobi's Tech Blog" },
           { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress,blog, tech, tech blog, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher, pwa, spa, progressive web app, single page app, microsoft office' },
         
       ]
@@ -225,13 +225,13 @@
             methods: {
         
                 search(){
-                    //NProgress.start()
-                    if(this.query == ''){
-                        alert("Please enter a word.");
-                    }else{
-                        this.$router.push({name:'search', params:{'query':this.query}});
-                    }
-                    //NProgress.done()
+                    this.$nuxt.$loading.start()
+                if(this.query == ''){
+                    alert("Please enter a word.");
+                }else{
+                    this.$router.push({name:'search', params:{'query':this.query}});
+                }
+                this.$nuxt.$loading.finish()
                 },
         
                 sub(){

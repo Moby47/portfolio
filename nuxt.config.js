@@ -60,6 +60,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/disqus',
   ],
   /*
   ** Nuxt.js modules
@@ -71,10 +72,12 @@ export default {
     '@nuxtjs/proxy',
     '@nuxtjs/pwa',
     ['nuxt-validate', {
-      lang: 'es',
+      lang: 'en',
       // regular vee-validate options
     }],
     '@nuxtjs/moment',
+    '@nuxtjs/pwa',
+    '@nuxtjs/universal-storage',
   ],
   /*
   ** Axios module configuration
@@ -93,6 +96,25 @@ export default {
       }
   },
   
+  manifest: {
+    name: "Henry's Portfolio",
+    short_name: "Henry's Portfolio",
+   // start_url: "/",
+   // scope: "/",
+    display: "standalone",
+    orientation: "portrait-primary",
+    background_color: "#ffffff",
+    theme_color: "#123c69",
+    description: "Henry Onyemaobi - A goal driven web developer",
+    dir: "ltr",
+    lang: "en-US",
+  },
+
+  workbox: {
+    importScripts: [
+        'custom-sw.js'
+    ],
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module

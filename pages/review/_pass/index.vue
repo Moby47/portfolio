@@ -78,7 +78,7 @@
       title: "Henry's Onyemaobi portfolio website",
       meta:[
         
-          { hid: 'description', name: 'description', content: "PLease leave a kind review on Henry Onyemaobi's Portfolio website" },
+          { hid: 'description10', name: 'description', content: "PLease leave a kind review on Henry Onyemaobi's Portfolio website" },
           { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher, pwa, spa, progressive web app, single page app,portfolio,web projects' },
         
       ]

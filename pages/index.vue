@@ -96,7 +96,7 @@
                                           class='pix-edit '
                                         height="325"
                                         alt='henry onyemaobi website developer in lagos'
-                                        src="_nuxt/assets/images/henry-website-edu.jpg"
+                                        src="http://localhost:8000/images/henry-website-edu.jpg"
                                         :lazy-src="`_nuxt/assets/images/black-spinner.gif`"
                                       ></v-parallax>
                                     </template>
@@ -178,7 +178,7 @@
                                       class='pix-edit'
                                         height="370"
                                         alt='henry onyemaobi, a web developer in lagos'
-                                        src="_nuxt/assets/images/henry-website-exp.jpg"
+                                        src="http://localhost:8000/images/henry-website-exp.jpg"
                                         :lazy-src="`_nuxt/assets/images/black-spinner.gif`"
                                       ></v-parallax>
                                     </template>
@@ -498,7 +498,7 @@ export default {
       title: "Henry's Web Development Portfolio Website",
       meta:[
         
-          { hid: 'description', name: 'description', content: 'Meet Henry! a goal driven web developer dedicated to creating, designing, developing professional web applications and websites' },
+          { hid: 'description6', name: 'description', content: 'Meet Henry! a goal driven web developer dedicated to creating, designing, developing professional web applications and websites' },
           { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher' },
         
       ]

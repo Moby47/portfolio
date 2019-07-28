@@ -24,8 +24,8 @@
         </v-list-tile>
 
         <v-list-tile
-        v-if='isauth() === true'
-          to="/manage-blog"
+        v-if="auth === 'true'"
+               to="/manage-blog"
           router
           exact
         >
@@ -41,7 +41,7 @@
         to="/manage-project"
         router
         exact
-        v-if='isauth() === true'
+        v-if="auth === 'true'"
       >
         <v-list-tile-action>
           <v-icon>build</v-icon>
@@ -50,13 +50,13 @@
           Manage project
         </v-list-tile-content>
       </v-list-tile>
-
-      <v-list-tile
+<!--
+        <v-list-tile
       @click.prevent='exportmaillist'
       to=""
       router
       exact
-      v-if='isauth() === true'
+      v-if="auth === 'true'"
     >
       <v-list-tile-action>
         <v-icon>mail</v-icon>
@@ -64,13 +64,13 @@
       <v-list-tile-content>
         Mail list
       </v-list-tile-content>
-    </v-list-tile>
+    </v-list-tile> -->
 
     <v-list-tile
     to="/generate"
     router
     exact
-    v-if='isauth() === true'
+    v-if="auth === 'true'"
   >
     <v-list-tile-action>
       <v-icon>link</v-icon>
@@ -86,7 +86,7 @@
   to=""
   router
   exact
-  v-if='isauth() === true'
+  v-if="auth === 'true'"
 >
   <v-list-tile-action>
     <v-icon>power_off</v-icon>
@@ -101,7 +101,7 @@
   to="/review/4747"
   router
   exact
-  v-if='isauth() === true'
+  v-if="auth === 'true'"
 >
   <v-list-tile-action>
     <v-icon>link</v-icon>
@@ -217,6 +217,7 @@
 
 <script>
   
+  
   import float from '~/components/float.vue'
   import axios from 'axios'
 
@@ -233,6 +234,7 @@ export default {
 
   data() {
     return {
+      auth:null,
       dialog: false,
       mail:'',
             pass:'',
@@ -290,9 +292,9 @@ this.$nuxt.$loading.start()
            var token = res.data.token;
           // console.log('token is  ' + token);
            if(token){
-                 localStorage.setItem('token',token);
+            this.$storage.setLocalStorage('token',token);
                  this.isauth();
-                 alert('Login successful!');
+                // alert('Login successful!');
                  this.dialog = false;
                  this.drawer = true;
            }else{
@@ -311,11 +313,14 @@ this.$nuxt.$loading.start()
      })
     }, //login
 
+    /*
 exportmaillist(){
  axios({
-   url: 'http://localhost:8000/api/downloadExcel',
+   url: 'http://localhost:8000/downloadExcel',
    method: 'GET',
    responseType: 'blob', // important
+   //headers:{Accept:"application/json"}
+   
  }).then((response) => {
    const url = window.URL.createObjectURL(new Blob([response.data]));
    const link = document.createElement('a');
@@ -324,26 +329,26 @@ exportmaillist(){
    document.body.appendChild(link);
    link.click();
  });
-},
+},*/
 
    isauth(){
-     /*
-    if(process.browser){
-      if(localStorage.getItem('token')){
-      
-           return true;
-     }else{
-     
-           return false;
-     }
-    }
-     */
+    //$storage.getUniversal
+
+    var dd =this.$storage.getLocalStorage('token')
+    if(dd){
+      this.auth = 'true';
+      console.log(this.auth)
+}else{
+      this.auth = 'false';
+      console.log(this.auth)
+}
+  
       },
 
 
        logout(){
         this.$nuxt.$loading.start();
-      localStorage.removeItem('token');
+        this.$storage.removeLocalStorage('token');
       this.isauth();
       
       console.log('logged out');

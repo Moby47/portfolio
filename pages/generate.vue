@@ -67,7 +67,7 @@
       title: "Henry's Onyemaobi",
       meta:[
         
-          { hid: 'description', name: 'description', content: "Henry Onyemaobi's, a web developer's portfolio website" },
+          { hid: 'description5', name: 'description', content: "Henry Onyemaobi's, a web developer's portfolio website" },
           { name: 'keywords', content: 'website, web design, web application, web, web development, wordpress, php, html, web instructor, developer, porfolio, henry onyemaobi,website instructor, website teacher, pwa, spa, progressive web app, single page app,portfolio,web projects' },
         
       ]
